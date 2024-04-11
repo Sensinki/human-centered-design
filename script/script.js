@@ -211,3 +211,52 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+// const step = 100; // Adjust this value to change the step size
+
+// document.getElementById("up").addEventListener("click", () => {
+//     window.scrollBy({
+//         top: -step,
+//         behavior: "smooth",
+//     });
+// });
+
+// document.getElementById("down").addEventListener("click", () => {
+//     window.scrollBy({
+//         top: step,
+//         behavior: "smooth",
+//     });
+// });
+
+// // To prevent the default button behavior (i.e., scrolling the page to the top)
+// document.querySelectorAll("#up-down button").forEach((button) => {
+//     button.addEventListener("click", (event) => {
+//         event.preventDefault();
+//     });
+// });
+
+
+
+// NOT WORKING 
+// const step = 100; // Adjust this value to change the step size
+
+// document.addEventListener("keydown", (event) => {
+//     if (event.key === "ArrowUp") {
+//         window.scrollBy({
+//             top: -step,
+//             behavior: "smooth",
+//         });
+//     } else if (event.key === "ArrowDown") {
+//         window.scrollBy({
+//             top: step,
+//             behavior: "smooth",
+//         });
+//     }
+// });
+
+// // To prevent the default button behavior (i.e., scrolling the page to the top)
+// document.querySelectorAll("#up-down button").forEach((button) => {
+//     button.addEventListener("click", (event) => {
+//         event.preventDefault();
+//     });
+// });
