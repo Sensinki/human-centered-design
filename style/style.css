@@ -77,17 +77,19 @@
     textarea {
         width: 20em;
         height: 50vh;
-        padding: 6px;
+        padding: .5em;
         font-size: medium;
         vertical-align: top;
         border-radius: 0.5em;
     }
 
     #copy-to-clipboard {
-        background-color: transparent;
-        border: none;
-        border-radius: 2px;
+        background-color: #eee;
+        border: 1px solid #111;
+        border-radius: .5em;
         cursor: pointer;
+        width: 20em;
+        padding: 1em;
     }
 
     #copy-to-clipboard:after {
@@ -104,7 +106,7 @@
     }
 
     #copy-to-clipboard:hover {
-        background-color: #eee;
+        background-color: #92e497;
     }
 
     #copy-to-clipboard:active {
