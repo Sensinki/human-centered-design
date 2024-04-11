@@ -1,13 +1,193 @@
-body {
-    background-color: dimgrey;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* CSS Document */
+
+/* FONTS */
+
+/* EVERYTHING */
+@layer base {
+    /* RESETTING */
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+        font-family: Verdana, Tahoma, sans-serif, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    button,
+    summary {
+        cursor: pointer;
+    }
 }
 
-article {
-    background-color: beige;
-    padding: 1em;
-    width: 50vw;
+/* CUSTOM PROPERTIES */
+:root {
+    /* color */
+    --black: #111;
+    --white: #eee;
 }
+
+/* MEDIA */
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* color */
+        --black: #eee;
+        --white: #111;
+    }
+}
+
+/* no animation in reduced mode */
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+    }
+}
+
+@media (width > 1em) {
+    body {
+        background-color: dimgrey;
+        display: grid;
+    }
+
+    /* HEADER */
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+        width: 10em;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+    }
+
+    /* CLIPBOARD */
+    #clipboard {
+        position: fixed;
+        z-index: 1;
+        top: 2em;
+        right: 1em;
+        overflow-x: hidden;
+    }
+
+    textarea {
+        width: 20em;
+        height: 50vh;
+        padding: 6px;
+        font-size: medium;
+        vertical-align: top;
+        border-radius: 0.5em;
+    }
+
+    #copy-to-clipboard {
+        background-color: transparent;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    #copy-to-clipboard:after {
+        content: "";
+        -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23757575' width='24' height='24'><path d='M0 0h24v24H0z' fill='none'/><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
+        -webkit-mask-size: cover;
+        background: none;
+        background-color: #202124;
+        display: inline-block;
+        height: 1em;
+        padding: 0;
+        width: 1em;
+        vertical-align: middle;
+    }
+
+    #copy-to-clipboard:hover {
+        background-color: #eee;
+    }
+
+    #copy-to-clipboard:active {
+        background-color: #ddd;
+    }
+
+    #messages {
+        display: inline-block;
+        font-size: small;
+    }
+
+    /* nav ul li { */
+    /* } */
+
+    nav ul li a {
+        display: block;
+        background-color: #111;
+        padding: 2.5em;
+        color: #eee;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 0 0.5em 0.5em 0;
+        /* width: 15em; */
+    }
+
+    main {
+        /* display */
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+
+        /* size */
+        height: 100vh;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main section > article {
+        /* display */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+        gap: 2em;
+
+        /* sizes */
+        width: 100vw;
+        height: 100vh;
+    }
+
+    article > section {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        background-color: beige;
+        padding: 1.5em;
+        width: 50vw;
+        max-width: 35em;
+        border-radius: 0.5em;
+    }
+
+    /* hidden h1 */
+    h1 {
+        /* https://www.a11yproject.com/posts/how-to-hide-content/ */
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+}
+
+@media (width > 38em) {
+}
+
+@media (width > 57em) {
+}
+
+/* ANIMATIONS */

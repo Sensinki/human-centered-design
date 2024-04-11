@@ -9,45 +9,164 @@
 </head>
 
 <body>
-    <h1>Nicolette Besemer</h1>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li><a href="#one" onclick="copyContent('one')">Archaeology</a></li>
+                <li><a href="#two" onclick="copyContent('two')">Philosophy</a></li>
+                <li><a href="#three" onclick="copyContent('three')">Psychology</a></li>
+                <li><a href="#four" onclick="copyContent('four')">Ecology</a></li>
+            </ul>
+        </nav>
 
-    <article>
-        <h2>Test Title 1</h2>
+    </header>
+    <main>
+        <h1>Nicolette Besemer</h1>
 
-        <p>
-            Archaeology is the study of the human past using material remains. These remains can be any objects that
-            people created, modified, or used. Portable remains are usually called artifacts. Artifacts include tools, 
-            clothing, and decorations. Non-portable remains, such as pyramids or post-holes, are called features.
-        </p>
+        <section id="clipboard">
+            <textarea id="copy-content"></textarea>
+            <button id="copy-to-clipboard" title="Copy to clipboard"></button>
+            <div id="messages"></div>
+        </section>
 
-        <p>
-            Archaeologists use artifacts and features to learn how people lived in specific times and places. They want
-            to know what these people's daily lives were like, how they were governed, how they interacted with each
-            other, and what they believed and valued. Sometimes, artifacts and features provide the only clues about an 
-            ancient community or civilization. Prehistoric civilizations did not leave behind written records, so we 
-            cannot read about them.
-        </p>
-    </article>
+        <section>
+            <article id="one">
+                <section>
+                    <h2>What is Archaeology?</h2>
 
-    <article>
-        <h2>Test Title 2</h2>
-    
-        <p>
-            Understanding why ancient cultures built the giant stone circles at Stonehenge, England, for instance, remains a
-            challenge 5,000 years after the first monoliths were erected. Archaeologists studying Stonehenge do not have ancient
-            manuscripts to tell them how cultures used the feature. They rely on the enormous stones themselves—how they are
-            arranged and the way the site developed over time.
-        </p>
-    
-        <p>
-            Most cultures with writing systems leave written records that archaeologists consult and study. Some of the most
-            valuable written records are everyday items, such as shopping lists and tax forms. Latin, the language of ancient Rome,
-            helps archaeologists understand artifacts and features discovered in parts of the Roman Empire. The use of Latin shows
-            how far the empire's influence extended, and the records themselves can tell archaeologists what foods were available in
-            an area, how much they cost, and what buildings belonged to families or businesses.
-        </p>
-    
-    </article>
+                    <p>
+                        Archaeology is the study of the human past using material remains. These remains can be any
+                        objects that
+                        people created, modified, or used. Portable remains are usually called artifacts. Artifacts
+                        include
+                        tools, clothing, and decorations. Non-portable remains, such as pyramids or post-holes, are
+                        called
+                        features.
+                    </p>
+
+                    <p>
+                        Archaeologists use artifacts and features to learn how people lived in specific times and
+                        places. They want
+                        to know what these people's daily lives were like, how they were governed, how they interacted
+                        with each other, and what they believed and valued. Sometimes, artifacts and features provide
+                        the only
+                        clues about an ancient community or civilization. Prehistoric civilizations did not leave behind
+                        written
+                        records, so we cannot read about them.
+                    </p>
+                    <p>
+                        Archaeology is based on the scientific method. Archaeologists ask questions and develop
+                        hypotheses. They use evidence to
+                        choose a dig site, then use scientific sampling techniques to select where on the site to dig.
+                        They observe, record,
+                        categorize, and interpret what they find. Then they share their results with other scientists
+                        and the public.
+                    </p>
+                    <span>Bron:
+                        <a href="https://education.nationalgeographic.org/resource/archaeology/">National Geographic</a>
+                    </span>
+                </section>
+            </article>
+
+            <article id="two">
+                <section>
+                    <h2>What is Philosophy?</h2>
+
+                    <p>
+                        Quite literally, the term "philosophy" means, "love of wisdom." In a broad sense, philosophy is
+                        an activity people undertake when they seek to understand fundamental truths about themselves,
+                        the world in which they live, and their relationships to the world and to each other. As an
+                        academic discipline philosophy is much the same.
+                    </p>
+
+                    <p>
+                        Those who study philosophy are perpetually engaged in asking, answering, and arguing for their
+                        answers
+                        to lifeâ€™s most basic questions. To make such a pursuit more systematic academic philosophy is
+                        traditionally divided into major areas of study.
+                    </p>
+                    <p>
+                        What often motivates the study of philosophy is not merely the answers or arguments themselves
+                        but whether or not the
+                        arguments are good and the answers are true.
+                    </p>
+                    <span>Bron:
+                        <a href="https://philosophy.fsu.edu/undergraduate-study/why-philosophy/What-is-Philosophy">What
+                            is Philosophy</a>
+                    </span>
+                </section>
+            </article>
+
+            <article id="three">
+                <section>
+                    <h2>What is Psychology?</h2>
+
+                    <p>
+                        Psychology is the study of mind and behavior. Its subject matter includes the behavior of
+                        humans and nonhumans, both
+                        conscious and unconscious phenomena, and mental processes such as thoughts, feelings, and
+                        motives. Psychology is an
+                        academic discipline of immense scope, crossing the boundaries between the natural and social
+                        sciences.
+                    </p>
+
+                    <p>
+                        Biological
+                        psychologists seek an understanding of the emergent properties of brains, linking the discipline
+                        to neuroscience. As
+                        social scientists, psychologists aim to understand the behavior of individuals and groups.
+                    </p>
+
+                    <p>
+                        While psychological knowledge is often applied to the assessment and treatment of mental health
+                        problems, it is also
+                        directed towards understanding and solving problems in several spheres of human activity. By
+                        many accounts, psychology
+                        ultimately aims to benefit society.
+                    </p>
+
+                    <span>Bron:
+                        <a href="https://en.wikipedia.org/wiki/Psychology">Wikipedia</a>
+                    </span>
+
+                </section>
+            </article>
+
+            <article id="four">
+                <section>
+                    <h2>What is Ecology?</h2>
+
+                    <p>
+                        Ecology is the study of organisms and how they interact with the environment around them. An
+                        ecologist studies the
+                        relationship between living things and their habitats.
+                    </p>
+
+                    <p>
+                        In order to research the environment, scientists ask questions, such as: How do organisms
+                        interact with the living and
+                        nonliving factors around them? What do organisms need to survive and thrive in their current
+                        environments? To find the
+                        answers to these questions, ecologists must study and observe all forms of life and their
+                        ecosystems throughout our
+                        world.
+                    </p>
+
+                    <p>
+                        Human activity plays an important role in the health of ecosystems all around the world.
+                        Pollution emitted from fossil
+                        fuels or factories can contaminate the food supply for a species, potentially changing an entire
+                        food web.
+                    </p>
+
+                    <span>Bron:
+                        <a href="https://education.nationalgeographic.org/resource/ecology/">National Geographic</a>
+                    </span>
+
+                </section>
+            </article>
+        </section>
+    </main>
 
     <script src="script/script.js"></script>
 </body>
