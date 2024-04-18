@@ -23,11 +23,12 @@
 /* CUSTOM PROPERTIES */
 :root {
     /* color */
-    --black: #111;
+    --black: #102c57;
     --white: #eee;
     --hover-button: #92e497;
     --active-button: #30c000;
-    --background: beige;
+    --background: #fefaf6;
+    --dark: #0d1b2f;
 }
 
 /* MEDIA */
@@ -157,6 +158,15 @@
     #up-down button {
         width: 10em;
         padding: 1em;
+    }
+
+    /* Paragraph elements */
+    .paragraph-buttons button {
+        background-color: var(--dark);
+        padding: 0.5em;
+    }
+    .paragraph-buttons button:hover {
+        background-color: var(--hover-button);
     }
 
     nav ul li a {
