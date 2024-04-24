@@ -42,6 +42,7 @@ function scrollPage(scrollAmount) {
 const clipboardTextarea = document.getElementById("copy-content");
 const congratsMessage = document.getElementById("congrats-message");
 
+// <p>
 const paragraphs = document.querySelectorAll("article p");
 paragraphs.forEach((paragraph) => {
     paragraph.addEventListener("click", () => {
@@ -50,11 +51,12 @@ paragraphs.forEach((paragraph) => {
         congratsMessage.style.display = "block";
         setTimeout(() => {
             congratsMessage.style.display = "none";
-        }, 1500);
+        }, 1000);
         triggerFireworks();
     });
 });
 
+// <h2>
 const titels = document.querySelectorAll("article h2");
 titels.forEach((titel) => {
     titel.addEventListener("click", () => {
@@ -64,7 +66,7 @@ titels.forEach((titel) => {
         congratsMessage.style.display = "block";
         setTimeout(() => {
             congratsMessage.style.display = "none";
-        }, 1500);
+        }, 1000);
         triggerFireworks();
     });
 });
